@@ -1,14 +1,27 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Navbar() {
+    let activeClassName = 'navbar__button navbar__button--selected';
+    let inactiveClassName = 'navbar__button';
+
     return (
         <div className="navbar">
-            <Link className="navbar__button navbar__button--selected" to="/">
+            <NavLink
+                to="/"
+                className={({ isActive }) =>
+                    isActive ? activeClassName : inactiveClassName
+                }
+            >
                 Accueil
-            </Link>
-            <Link className="navbar__button" to="about">
+            </NavLink>
+            <NavLink
+                to="about"
+                className={({ isActive }) =>
+                    isActive ? activeClassName : inactiveClassName
+                }
+            >
                 A propos
-            </Link>
+            </NavLink>
         </div>
     );
 }
