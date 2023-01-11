@@ -1,0 +1,43 @@
+@mixin button {
+    position: relative;
+    z-index: 1;
+    padding: 15px 0;
+    background: linear-gradient(
+        175deg,
+        $secondary-color -20%,
+        $primary-color 100%
+    );
+    border-radius: 30px;
+    color: white;
+    font-weight: 500;
+    box-shadow: 0px 2px 10px 1.2px darkgrey;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    &:hover,
+    &:active {
+        border-radius: 30px;
+        &::after {
+            opacity: 1;
+            border-radius: 30px;
+        }
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(
+            175deg,
+            lighten($secondary-color, 10) -20%,
+            lighten($primary-color, 10) 100%
+        );
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+        border-radius: 30px;
+        box-shadow: 0px 2px 10px 2px darkgrey;
+        cursor: pointer;
+    }
+}

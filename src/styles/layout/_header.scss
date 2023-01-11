@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 100px;
+
+    &__logo {
+        height: 68px;
+    }
+}
+
+.navbar {
+    display: flex;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+}
