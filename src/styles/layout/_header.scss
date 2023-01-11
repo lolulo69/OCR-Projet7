@@ -10,8 +10,16 @@
 
 .navbar {
     display: flex;
-    font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 500;
     font-size: 24px;
+    align-items: center;
+    gap: 55px;
+
+    &__button {
+        color: $primary-color;
+
+        &--selected {
+            text-decoration-line: underline;
+        }
+    }
 }

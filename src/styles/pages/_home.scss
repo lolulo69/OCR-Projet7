@@ -1,0 +1,23 @@
+.banner {
+    background: url(../../images/banner.png) no-repeat center/cover;
+    margin: 0 100px;
+    height: 223px;
+    border-radius: 25px;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $secondary-color;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 25px;
+        height: 100%;
+        width: 100%;
+
+        h1 {
+            margin: 0;
+            font-size: 48px;
+            font-weight: 500;
+        }
+    }
+}
