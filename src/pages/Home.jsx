@@ -11,6 +11,8 @@ const Home = () => {
             </section>
             <section className="property">
                 <LocationCard />
+                <div className="filling-empty-space-childs"></div>
+                <div className="filling-empty-space-childs"></div>
             </section>
         </React.Fragment>
     );
