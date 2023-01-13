@@ -2,14 +2,13 @@
     display: flex;
     align-items: center;
     flex-flow: column nowrap;
-    padding: 100px 0;
+    padding: 50px 0;
     color: $primary-color;
 
     &__title {
         font-size: 288px;
         font-weight: 700;
-        margin: 0;
-        margin-bottom: 40px;
+        margin: 40px 0;
     }
 
     &__subtitle {
