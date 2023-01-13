@@ -1,0 +1,30 @@
+.banner {
+    margin: 25px 100px;
+    height: 223px;
+    border-radius: 25px;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $secondary-color;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 25px;
+        height: 100%;
+        width: 100%;
+
+        h1 {
+            margin: 0;
+            font-size: 48px;
+            font-weight: 500;
+        }
+    }
+
+    &--home {
+        background: url(../../images/bannerHome.png) no-repeat center/cover;
+    }
+
+    &--about {
+        background: url(../../images/bannerAbout.png) no-repeat center/cover;
+    }
+}

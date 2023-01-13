@@ -1,0 +1,15 @@
+.textSlider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary-color;
+    margin: 0 200px;
+    padding: 10px 20px;
+    border-radius: 5px;
+
+    &__title {
+        color: $secondary-color;
+        font-size: 24px;
+        font-weight: 500;
+    }
+}

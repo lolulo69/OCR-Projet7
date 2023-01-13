@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const LocationCard = () => {
     const [data, setData] = useState([]);
@@ -20,9 +21,11 @@ const LocationCard = () => {
                     key={item.id}
                     style={{ backgroundImage: `url(${item.cover})` }}
                 >
-                    <div className="property__card__container">
-                        <h2>{item.title}</h2>
-                    </div>
+                    <Link to={`/room/${item.id}`}>
+                        <div className="property__card__container">
+                            <h2>{item.title}</h2>
+                        </div>
+                    </Link>
                 </div>
             ))}
         </React.Fragment>

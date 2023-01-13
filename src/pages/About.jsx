@@ -1,5 +1,14 @@
+import React from 'react';
+import Banner from '../components/Banner';
+import TextSlider from '../components/TextSlider';
+
 function About() {
-    return <h1>About</h1>;
+    return (
+        <React.Fragment>
+            <Banner bannerLocation="about" />
+            <TextSlider />
+        </React.Fragment>
+    );
 }
 
 export default About;
