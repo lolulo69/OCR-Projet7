@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
+import Loader from '../components/Loader';
 
 function Room() {
     const { roomId } = useParams();
@@ -19,7 +20,7 @@ function Room() {
     }, [roomId]);
 
     if (loading) {
-        return <div>Loading...</div>;
+        return <Loader />;
     }
 
     return (
