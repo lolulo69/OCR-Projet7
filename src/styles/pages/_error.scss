@@ -1,0 +1,27 @@
+.error {
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    padding: 100px 0;
+    color: $primary-color;
+
+    &__title {
+        font-size: 288px;
+        font-weight: 700;
+        margin: 0;
+        margin-bottom: 40px;
+    }
+
+    &__subtitle {
+        font-weight: 500;
+        font-size: 36px;
+    }
+
+    &__link {
+        text-decoration-line: underline;
+        font-weight: 500;
+        font-size: 18px;
+        color: $primary-color;
+        margin-top: 180px;
+    }
+}

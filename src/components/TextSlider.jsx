@@ -3,13 +3,9 @@ import React, { useState } from 'react';
 function TextSlider({ title, text }) {
     const [isOpen, setIsOpen] = useState(false);
 
-    function toggleIsOpen() {
-        setIsOpen((prevIsOpen) => !prevIsOpen);
-    }
-
     return (
         <React.Fragment>
-            <div onClick={toggleIsOpen} className="textSlider">
+            <div onClick={() => setIsOpen(!isOpen)} className="textSlider">
                 <h3 className="textSlider__title">{title}</h3>
                 <svg
                     width="25"
