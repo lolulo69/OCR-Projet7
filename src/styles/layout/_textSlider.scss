@@ -4,12 +4,33 @@
     align-items: center;
     background-color: $primary-color;
     margin: 0 200px;
+    margin-top: 30px;
     padding: 10px 20px;
     border-radius: 5px;
+    position: relative;
+    z-index: 1;
 
     &__title {
         color: $secondary-color;
         font-size: 24px;
         font-weight: 500;
+    }
+}
+
+.textContent {
+    display: flex;
+    align-items: flex-end;
+    background-color: $background-color;
+    margin: 0 200px;
+    margin-top: -10px;
+    padding: 10px 20px;
+    padding-top: 35px;
+    position: relative;
+    z-index: 0;
+
+    &__text {
+        color: $primary-color;
+        font-size: 24px;
+        font-weight: 400;
     }
 }
