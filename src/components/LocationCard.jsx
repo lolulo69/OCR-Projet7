@@ -7,11 +7,13 @@ const LocationCard = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 3000);
         async function fetchData() {
             const response = await fetch('logements.json');
             const json = await response.json();
             setData(json);
-            setLoading(false);
         }
         fetchData();
     }, []);
