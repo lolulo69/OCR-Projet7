@@ -3,16 +3,12 @@
     justify-content: space-between;
     align-items: center;
     background-color: $primary-color;
-    margin: 0 200px;
     margin-top: 30px;
-    padding: 10px 20px;
-    border-radius: 5px;
     position: relative;
     z-index: 1;
 
     &__title {
         color: $secondary-color;
-        font-size: 24px;
         font-weight: 500;
     }
 }
@@ -21,8 +17,6 @@
     display: flex;
     align-items: flex-end;
     background-color: $background-color;
-    margin: 0 200px;
-    margin-top: -10px;
     padding: 10px 20px;
     padding-top: 35px;
     position: relative;
@@ -30,7 +24,55 @@
 
     &__text {
         color: $primary-color;
-        font-size: 24px;
         font-weight: 400;
+    }
+}
+
+.textSlider--about {
+    margin: 0 200px;
+    margin-top: 30px;
+    padding: 10px 20px;
+    border-radius: 5px;
+
+    &__title {
+        font-size: 24px;
+    }
+}
+
+.textSlider--room {
+    border-radius: 10px;
+    padding: 15px 20px;
+
+    &__container {
+        max-width: 50%;
+        width: 1000px;
+    }
+
+    &__title {
+        font-size: 18px;
+    }
+}
+
+.textContent--about {
+    margin: 0 200px;
+    margin-top: -10px;
+    padding-bottom: 15px;
+
+    &__text {
+        font-size: 24px;
+    }
+}
+
+.textContent--room {
+    border-radius: 10px;
+    padding-bottom: 20px;
+    margin-top: -10px;
+
+    &__text {
+        font-size: 18px;
+    }
+
+    &__ul {
+        list-style: none;
     }
 }

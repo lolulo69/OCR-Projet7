@@ -1,12 +1,21 @@
 import React, { useState } from 'react';
 
-function TextSlider({ title, text }) {
+function TextSlider({ page, title, text }) {
     const [isOpen, setIsOpen] = useState(false);
+    let list = false;
+    if (Array.isArray(text)) {
+        list = true;
+    }
 
     return (
-        <React.Fragment>
-            <div onClick={() => setIsOpen(!isOpen)} className="textSlider">
-                <h3 className="textSlider__title">{title}</h3>
+        <div className={`textSlider__container textSlider--${page}__container`}>
+            <div
+                onClick={() => setIsOpen(!isOpen)}
+                className={`textSlider textSlider--${page}`}
+            >
+                <h3 className={`textSlider__title textSlider--${page}__title`}>
+                    {title}
+                </h3>
                 <svg
                     width="25"
                     height="15"
@@ -21,12 +30,25 @@ function TextSlider({ title, text }) {
                     />
                 </svg>
             </div>
-            {isOpen && (
-                <div className="textContent">
-                    <p className="textContent__text">{text}</p>
+            {isOpen && list === false && (
+                <div className={`textContent textContent--${page}`}>
+                    <p
+                        className={`textContent__text textContent--${page}__text`}
+                    >
+                        {text}
+                    </p>
                 </div>
             )}
-        </React.Fragment>
+            {isOpen && list === true && (
+                <div className={`textContent textContent--${page}`}>
+                    <ul className={`textContent__ul textContent--${page}__ul`}>
+                        {text.map((item) => (
+                            <li key={item}>{item}</li>
+                        ))}
+                    </ul>
+                </div>
+            )}
+        </div>
     );
 }
 

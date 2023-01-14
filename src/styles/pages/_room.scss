@@ -1,0 +1,67 @@
+.room {
+    margin: 0 100px;
+    color: $primary-color;
+
+    &__titleblock {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 25px 0;
+
+        &__title {
+            font-weight: 500;
+            font-size: 36px;
+            margin: 10px 0;
+        }
+
+        &__location {
+            font-weight: 500;
+            font-size: 18px;
+        }
+
+        &__owner {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            max-width: 50%;
+            margin-top: -25px;
+
+            &__name {
+                font-weight: 500;
+                font-size: 18px;
+                word-spacing: 9999999px;
+                text-align: end;
+                margin: 10px;
+                line-height: 22px;
+            }
+
+            &__img {
+                border-radius: 50%;
+                height: 64px;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__tagsblock {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 0;
+
+        &__tagscontainer {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+        }
+    }
+
+    &__sliderContainer {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        gap: 70px;
+    }
+}

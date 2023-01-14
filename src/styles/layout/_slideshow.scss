@@ -1,0 +1,23 @@
+.slideshow {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    aspect-ratio: 248 / 83;
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+
+    svg {
+        margin: 0 20px;
+        cursor: pointer;
+    }
+
+    &__count {
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        align-self: end;
+        margin: 15px 0;
+    }
+}
