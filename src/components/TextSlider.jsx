@@ -10,7 +10,10 @@ function TextSlider({ page, title, text }) {
     return (
         <div className={`textSlider__container textSlider--${page}__container`}>
             <div
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={(event) => {
+                    setIsOpen(!isOpen);
+                    event.stopPropagation();
+                }}
                 className={`textSlider textSlider--${page}`}
             >
                 <h3 className={`textSlider__title textSlider--${page}__title`}>
@@ -30,8 +33,12 @@ function TextSlider({ page, title, text }) {
                     />
                 </svg>
             </div>
-            {isOpen && list === false && (
-                <div className={`textContent textContent--${page}`}>
+            {list === false && (
+                <div
+                    className={`textContent ${
+                        isOpen && 'textContent__show'
+                    } textContent--${page}`}
+                >
                     <p
                         className={`textContent__text textContent--${page}__text`}
                     >
@@ -39,8 +46,12 @@ function TextSlider({ page, title, text }) {
                     </p>
                 </div>
             )}
-            {isOpen && list === true && (
-                <div className={`textContent textContent--${page}`}>
+            {list === true && (
+                <div
+                    className={`textContent ${
+                        isOpen && 'textContent__show'
+                    } textContent--${page}`}
+                >
                     <ul className={`textContent__ul textContent--${page}__ul`}>
                         {text.map((item) => (
                             <li key={item}>{item}</li>

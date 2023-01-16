@@ -25,7 +25,10 @@ function Slideshow({ pictures }) {
             style={{ backgroundImage: `url(${pictures[currentIndex]})` }}
         >
             <svg
-                onClick={handlePrev}
+                onClick={(e) => {
+                    handlePrev();
+                    e.stopPropagation();
+                }}
                 width="48"
                 height="80"
                 viewBox="0 0 48 80"
@@ -41,7 +44,10 @@ function Slideshow({ pictures }) {
                 pictures.length
             }`}</p>
             <svg
-                onClick={handleNext}
+                onClick={(e) => {
+                    handleNext();
+                    e.stopPropagation();
+                }}
                 width="48"
                 height="80"
                 viewBox="0 0 48 80"
