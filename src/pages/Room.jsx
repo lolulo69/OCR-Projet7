@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import Loader from '../components/Loader';
 import Slideshow from '../components/Slideshow';
@@ -12,16 +12,27 @@ function Room() {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
 
+    const [productExist, setProductExist] = useState(true);
+
     useEffect(() => {
         async function fetchData() {
             const response = await fetch('../logements.json');
             const data = await response.json();
             const roomData = data.filter((item) => item.id === roomId)[0];
+            console.log(roomData);
+            if (roomData === undefined) {
+                setLoading(false);
+                return setProductExist(false);
+            }
             setData(roomData);
             setLoading(false);
         }
         fetchData();
     }, [roomId]);
+
+    if (!productExist) {
+        return <Navigate to="../Error" />;
+    }
 
     if (loading) {
         return <Loader />;
