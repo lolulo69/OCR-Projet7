@@ -1,0 +1,14 @@
+.tagsContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 10px;
+    color: $secondary-color;
+
+    &__tag {
+        border-radius: 10px;
+        background-color: $primary-color;
+        padding: 5px 30px;
+        font-weight: 500;
+        font-size: 14px;
+    }
+}

@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import Loader from '../components/Loader';
 import Slideshow from '../components/Slideshow';
 import TextSlider from '../components/TextSlider';
+import Tags from '../components/Tags';
+import Stars from '../components/Stars';
 
 function Room() {
     const { roomId } = useParams();
@@ -48,6 +50,10 @@ function Room() {
                             alt={data.host.name}
                         />
                     </div>
+                </div>
+                <div className="room__tagsBlock">
+                    <Tags tags={data.tags} />
+                    <Stars rating={data.rating} />
                 </div>
                 <div className="room__sliderContainer">
                     <TextSlider

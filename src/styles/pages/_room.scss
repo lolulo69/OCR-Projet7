@@ -44,18 +44,12 @@
         }
     }
 
-    &__tagsblock {
+    &__tagsBlock {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
-        margin: 20px 0;
-
-        &__tagscontainer {
-            display: flex;
-            flex-flow: row nowrap;
-            align-items: center;
-        }
+        margin-top: 20px;
     }
 
     &__sliderContainer {
