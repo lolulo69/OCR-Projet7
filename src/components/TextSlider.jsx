@@ -26,6 +26,7 @@ function TextSlider({ page, title, text }) {
                     fill="none"
                     transform={isOpen ? 'scale(1, -1)' : 'scale(1, 1)'}
                     xmlns="http://www.w3.org/2000/svg"
+                    className={`textSlider__svg textSlider--${page}__svg`}
                 >
                     <path
                         d="M2.6635 0.859489L0.530579 3.00462L12.4605 14.9233L24.3904 2.99257L22.2575 0.859489L12.4605 10.6572L2.6635 0.859489Z"

@@ -82,7 +82,7 @@
         }
     }
 
-    svg {
+    &__svg {
         @include mobile-only {
             transform: scale(64%, 64%) translateX(10px);
             transform-origin: 50% 50%;
@@ -117,7 +117,7 @@
         }
     }
 
-    svg {
+    &__svg {
         @include mobile-only {
             transform: scale(64%, 64%) translateX(10px);
             transform-origin: 50% 50%;
