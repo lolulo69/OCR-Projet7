@@ -11,7 +11,6 @@ function Room() {
 
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
-
     const [productExist, setProductExist] = useState(true);
 
     useEffect(() => {
@@ -19,7 +18,6 @@ function Room() {
             const response = await fetch('../logements.json');
             const data = await response.json();
             const roomData = data.filter((item) => item.id === roomId)[0];
-            console.log(roomData);
             if (roomData === undefined) {
                 setLoading(false);
                 return setProductExist(false);
@@ -42,29 +40,27 @@ function Room() {
         <React.Fragment>
             <main className="room">
                 <Slideshow pictures={data.pictures} />
-                <div className="room__titleblock">
-                    <div>
-                        <h1 className="room__titleblock__title">
-                            {data.title}
-                        </h1>
-                        <h3 className="room__titleblock__location">
+                <div className="room__sidesContainer">
+                    <div className="room__leftSide">
+                        <h1 className="room__leftSide__title">{data.title}</h1>
+                        <h3 className="room__leftSide__location">
                             {data.location}
                         </h3>
+                        <Tags tags={data.tags} />
                     </div>
-                    <div className="room__titleblock__owner">
-                        <p className="room__titleblock__owner__name">
-                            {data.host.name}
-                        </p>
-                        <img
-                            className="room__titleblock__owner__img"
-                            src={data.host.picture}
-                            alt={data.host.name}
-                        />
+                    <div className="room__rightSide">
+                        <div className="room__rightSide__owner">
+                            <p className="room__rightSide__owner__name">
+                                {data.host.name}
+                            </p>
+                            <img
+                                className="room__rightSide__owner__img"
+                                src={data.host.picture}
+                                alt={data.host.name}
+                            />
+                        </div>
+                        <Stars rating={data.rating} />
                     </div>
-                </div>
-                <div className="room__tagsBlock">
-                    <Tags tags={data.tags} />
-                    <Stars rating={data.rating} />
                 </div>
                 <div className="room__sliderContainer">
                     <TextSlider

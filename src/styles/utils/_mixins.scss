@@ -41,3 +41,21 @@
         cursor: pointer;
     }
 }
+
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+        @content;
+    }
+}
+
+@mixin tablet-only {
+    @media screen and (min-width: map-get($breakpoints, tablet-min)) and (max-width: map-get($breakpoints, tablet-max)) {
+        @content;
+    }
+}
+
+@mixin desktop-tablet {
+    @media screen and (min-width: map-get($breakpoints, tablet-min)) {
+        @content;
+    }
+}

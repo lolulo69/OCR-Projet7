@@ -3,20 +3,38 @@
     height: 223px;
     border-radius: 25px;
 
+    @include mobile-only {
+        margin: 20px;
+        margin-bottom: 0;
+        height: 110px;
+        border-radius: 10px;
+    }
+
     &__container {
         display: flex;
         align-items: center;
         justify-content: center;
+        text-align: center;
         color: $secondary-color;
         background: rgba(0, 0, 0, 0.3);
         border-radius: 25px;
         height: 100%;
         width: 100%;
 
+        @include mobile-only {
+            border-radius: 10px;
+            text-align: left;
+        }
+
         h1 {
             margin: 0;
             font-size: 48px;
             font-weight: 500;
+
+            @include mobile-only {
+                font-size: 24px;
+                margin-left: 16px;
+            }
         }
     }
 
@@ -26,5 +44,11 @@
 
     &--about {
         background: url(../../images/bannerAbout.png) no-repeat center/cover;
+
+        @include mobile-only {
+            background: url(../../images/bannerAboutMobile.png) no-repeat
+                center/cover;
+            height: 223px;
+        }
     }
 }

@@ -1,7 +1,17 @@
 .starsContainer {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
     margin-top: -25px;
-    gap: 5px;
+    gap: 10px;
+
+    @include mobile-only {
+        margin: 0;
+        gap: 0px;
+
+        svg {
+            transform: scale(50%, 50%);
+            transform-origin: 50% 50%;
+            margin: 0 -5px;
+        }
+    }
 }

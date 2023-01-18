@@ -9,10 +9,19 @@
     background-position: center;
     pointer-events: none;
 
+    @include mobile-only {
+        aspect-ratio: 67 / 51;
+    }
+
     svg {
         margin: 0 20px;
         cursor: pointer;
         pointer-events: all;
+
+        @include mobile-only {
+            transform: scale(25%, 25%);
+            margin: 0 -10px;
+        }
     }
 
     &__count {
@@ -22,5 +31,9 @@
         align-self: end;
         margin: 15px 0;
         pointer-events: none;
+
+        @include mobile-only {
+            display: none;
+        }
     }
 }
