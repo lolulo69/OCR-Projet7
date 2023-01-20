@@ -10,6 +10,23 @@
     cursor: pointer;
     user-select: none;
 
+    &__svg {
+        transition: all 0.5s ease-in-out;
+        @include mobile-only {
+            transform: scale(64%, 64%) translateX(10px);
+            transform-origin: 50% 50%;
+        }
+
+        &--rotate {
+            transform: rotate(0.5turn);
+            transition: all 0.5s ease-in-out;
+
+            @include mobile-only {
+                transform: rotate(0.5turn) scale(64%, 64%) translateX(-10px);
+            }
+        }
+    }
+
     &__title {
         color: $secondary-color;
         font-weight: 500;
@@ -81,13 +98,6 @@
             font-size: 13px;
         }
     }
-
-    &__svg {
-        @include mobile-only {
-            transform: scale(64%, 64%) translateX(10px);
-            transform-origin: 50% 50%;
-        }
-    }
 }
 
 .textSlider--room {
@@ -114,13 +124,6 @@
 
         @include mobile-only {
             font-size: 13px;
-        }
-    }
-
-    &__svg {
-        @include mobile-only {
-            transform: scale(64%, 64%) translateX(10px);
-            transform-origin: 50% 50%;
         }
     }
 }
