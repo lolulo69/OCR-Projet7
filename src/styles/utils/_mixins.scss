@@ -49,13 +49,13 @@
 }
 
 @mixin tablet-only {
-    @media screen and (min-width: map-get($breakpoints, tablet-min)) and (max-width: map-get($breakpoints, tablet-max)) {
+    @media screen and (min-width: map-get($breakpoints, tablet)) and (max-width: map-get($breakpoints, desktop)) {
         @content;
     }
 }
 
-@mixin desktop-tablet {
-    @media screen and (min-width: map-get($breakpoints, tablet-min)) {
+@mixin mobile-tablet {
+    @media screen and (max-width: map-get($breakpoints, desktop)) {
         @content;
     }
 }

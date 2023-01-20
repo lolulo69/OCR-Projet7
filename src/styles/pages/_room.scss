@@ -6,12 +6,16 @@
         margin: 0 20px;
     }
 
+    @include tablet-only {
+        margin: 0 50px;
+    }
+
     &__sidesContainer {
         display: flex;
         flex-flow: row nowrap;
         margin-top: 25px;
 
-        @include mobile-only {
+        @include mobile-tablet {
             flex-flow: column nowrap;
             margin: 0;
         }
@@ -23,7 +27,7 @@
         justify-content: space-between;
         align-items: flex-start;
 
-        @include mobile-only {
+        @include mobile-tablet {
             margin: 0;
             margin-top: 5px;
         }
@@ -56,12 +60,16 @@
         margin-top: 20px;
         max-width: 50%;
 
-        @include mobile-only {
+        @include mobile-tablet {
             flex-flow: row-reverse nowrap;
             justify-content: space-between;
             align-items: center;
             max-width: 100%;
             margin-top: 5px;
+        }
+
+        @include tablet-only {
+            margin-top: 15px;
         }
 
         &__owner {
@@ -101,7 +109,7 @@
         justify-content: space-between;
         gap: 70px;
 
-        @include mobile-only {
+        @include mobile-tablet {
             flex-flow: column nowrap;
             gap: 0px;
         }

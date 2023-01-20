@@ -13,6 +13,10 @@
         aspect-ratio: 67 / 51;
     }
 
+    @include tablet-only {
+        aspect-ratio: 67 / 40;
+    }
+
     svg {
         margin: 0 20px;
         cursor: pointer;
@@ -21,6 +25,11 @@
         @include mobile-only {
             transform: scale(25%, 25%);
             margin: 0 -10px;
+        }
+
+        @include tablet-only {
+            transform: scale(75%, 75%);
+            margin: 0 10px;
         }
     }
 

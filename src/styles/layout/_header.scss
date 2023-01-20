@@ -21,6 +21,10 @@
     @include mobile-only {
         padding: 20px;
     }
+
+    @include tablet-only {
+        padding: 50px;
+    }
 }
 
 .navbar {

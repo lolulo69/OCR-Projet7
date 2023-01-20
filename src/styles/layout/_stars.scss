@@ -14,4 +14,8 @@
             margin: 0 -5px;
         }
     }
+
+    @include tablet-only {
+        margin: 0;
+    }
 }
