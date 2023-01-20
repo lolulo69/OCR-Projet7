@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
 
+/**
+ * Ce composant TextSlider affiche un titre et un texte ou une liste de texte.
+ * Le composant comporte un bouton ouvrir/fermer pour afficher ou non le contenu.
+ * @param {string} page - La page sur laquelle le composant va être utilisé.
+ * @param {string} title - Le titre du composant.
+ * @param {string | string[]} text - Le contenu du composant, qui peut être du texte ou une liste de texte.
+ */
 function TextSlider({ page, title, text }) {
     const [isOpen, setIsOpen] = useState(false);
     let list = false;
@@ -10,6 +17,7 @@ function TextSlider({ page, title, text }) {
     return (
         <div className={`textSlider__container textSlider--${page}__container`}>
             <div
+                //onClick toggle l'état du composant pour afficher ou masquer le contenu
                 onClick={(event) => {
                     setIsOpen(!isOpen);
                     event.stopPropagation();

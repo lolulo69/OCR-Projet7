@@ -1,13 +1,22 @@
 import React, { useState, useEffect } from 'react';
 
+/**
+ * Ce composant Stars affiche une note avec un certain nombre d'étoiles pleines et vides.
+ *
+ * @component
+ * @param {number} rating - la valeur de la note (entre 0 et 5)
+ * @returns {JSX.Element} - un div contenant les étoiles remplies et vides
+ */
 function Stars({ rating }) {
     const emptyStar = '#E3E3E3';
     const fullStar = '#FF6060';
 
     const [data, setData] = useState(Array(5).fill(emptyStar));
 
+    /**
+     * Rempli les étoiles en fonction de la note
+     */
     useEffect(() => {
-        // remplir les étoiles en fonction de la note
         const newData = Array(5).fill(emptyStar);
         for (let i = 0; i < rating; i++) {
             newData[i] = fullStar;

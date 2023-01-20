@@ -5,6 +5,12 @@ import About from './pages/About'
 import Error from './pages/Error'
 import Room from './pages/Room'
 
+/**
+ * @module App
+ * @desc Ce composant gère la navigation de l'application en utilisant React Router. Il définit les différentes routes de l'application
+ * et utilise les composants `Layout`, `Home`, `About`, `Error` et `Room` pour afficher le contenu de chaque page.
+ * @returns {React.Fragment} - Rendu du composant
+ */
 function App() {
   return (
     <BrowserRouter>

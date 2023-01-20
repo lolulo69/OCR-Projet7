@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
 
+/**
+ * Ce composant Slideshow affiche un diaporama de photos.
+ * @param {Object} props
+ * @param {Array} props.pictures  - un tableau d'images à afficher dans le slideshow
+ */
 function Slideshow({ pictures }) {
     const [currentIndex, setCurrentIndex] = useState(0);
 
+    /**
+     * Handle the click event on the previous button
+     */
     const handlePrev = () => {
         if (currentIndex === 0) {
             setCurrentIndex(pictures.length - 1);
@@ -11,6 +19,9 @@ function Slideshow({ pictures }) {
         }
     };
 
+    /**
+     * Handle the click event on the next button
+     */
     const handleNext = () => {
         if (currentIndex === pictures.length - 1) {
             setCurrentIndex(0);

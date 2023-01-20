@@ -1,3 +1,6 @@
+/**
+ * Ce composant Loader affiche une animation pendant le chargement de la page.
+ */
 function Loader() {
     return (
         <div className="loadingContainer">
