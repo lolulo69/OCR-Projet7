@@ -4,14 +4,14 @@
     border-radius: 25px;
 
     @include mobile-only {
-        margin: 20px;
-        margin-bottom: 0;
+        margin: 0 20px;
         height: 110px;
         border-radius: 10px;
     }
 
     @include tablet-only {
-        margin: 25px 50px;
+        margin: 0 50px;
+        margin-bottom: 25px;
     }
 
     &__container {
