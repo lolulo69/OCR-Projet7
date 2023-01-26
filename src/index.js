@@ -12,6 +12,9 @@ import App from './App';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
+const htmlLang = "fr";
+
+document.documentElement.lang = htmlLang; // Passage du paramètre lang de la balise HTML au français
 
 root.render(
   <StrictMode>
