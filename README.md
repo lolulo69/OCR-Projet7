@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Kasa : 7ème projet pour la formation développeur web d'Openclassrooms
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projet bootstrapé grâce à [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## But du projet
 
-In the project directory, you can run:
+Ce projet est une single-page application basée sur React avec React router pour la gestion des routes.
+Cette application est prévue pour permettre la location de chambres (type AirBNB).
+L'application n'est pas complète, seul le front-end est réalisé ici.
+On se sert d'un fichier .json pour simuler un appel API.
+Un loader est implémenté, étant donné qu'il n'y a (quasiment) aucun délai de chargement ici, un délai de 3 secondes est simulé au chargement de la page d'accueil (oui c'est beaucoup, mais admirez le loader).
+
+Pour en savoir plus, la documentation du projet (générée avec JSdoc) est dispo dans le dossier [docs](https://github.com/lolulo69/OCR-Projet7/tree/main/docs) !
+
+## Scripts utilisables
+
+Vous pouvez utiliser les scripts suivants avec ce projet :
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Lance l'application en mode développement.\
+Ouvrez [http://localhost:3000](http://localhost:3000) pour y accéder depuis votre navigateur.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+La page se réactualise automatiquement à chaque changement.\
+Vous pouvez aussi voir les erreurs dans la console.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
+Contruit l'application dans le dossier `build`.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
+Cela configure correctement React en mode production et optimise la construction pour obtenir les meilleures performances.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+La construction est minimisée et les noms de fichiers incluent les hachages.\
+L'application est prête à être déployée !
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Vous pouvez voir la section [deployment](https://facebook.github.io/create-react-app/docs/deployment) pour plus d'infos (en anglais).
 
-### `npm run eject`
+### `npm run doc`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Construit la documentation du projet au format html dans le dossier "docs" grâce à JSdoc.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## ----------------
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Il reste d'autres scripts implémentés par défaut avec Create React App que je ne documenterai pas ici.
+Pour plus d'infos : [Voir la documentation de Create React App](https://facebook.github.io/create-react-app/docs/getting-started)
