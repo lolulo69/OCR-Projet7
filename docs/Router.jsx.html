@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: index.js</title>
+    <title>JSDoc: Source: Router.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: index.js</h1>
+    <h1 class="page-title">Source: Router.jsx</h1>
 
     
 
@@ -26,30 +26,35 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import {StrictMode} from 'react';
-import {createRoot} from 'react-dom/client';
-import './styles/main.scss';
-
-import Router from './Router';
+            <pre class="prettyprint source linenums"><code>import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout'
+import Home from './pages/Home'
+import About from './pages/About'
+import Error from './pages/Error'
+import Room from './pages/Room'
 
 /**
- * @module index
- * @desc Ce fichier est le point d'entrée de l'application. Il importe les composants nécessaires,
- * configure React DOM et affiche l'application dans l'élément HTML avec l'ID "root"
+ * @module Router
+ * @desc Ce composant gère la navigation de l'application en utilisant React Router. Il définit les différentes routes de l'application
+ * et utilise les composants `Layout`, `Home`, `About`, `Error` et `Room` pour afficher le contenu de chaque page.
+ * @returns {React.Fragment} - Rendu du composant
  */
+function Router() {
+  return (
+    &lt;BrowserRouter>
+      &lt;Routes>
+        &lt;Route path='/' element={&lt;Layout />}>
+          &lt;Route index element={&lt;Home />} />
+          &lt;Route path='about' element={&lt;About />} />
+          &lt;Route path='room/:roomId' element={&lt;Room />} />
+          &lt;Route path='*' element={&lt;Error />} />
+        &lt;/Route>
+      &lt;/Routes>
+    &lt;/BrowserRouter>
+  );
+}
 
-const rootElement = document.getElementById('root');
-const root = createRoot(rootElement);
-const htmlLang = "fr";
-
-document.documentElement.lang = htmlLang; // Passage du paramètre lang de la balise HTML au français
-
-root.render(
-  &lt;StrictMode>
-    &lt;Router />
-  &lt;/StrictMode>,
-);
-
+export default Router;
 </code></pre>
         </article>
     </section>

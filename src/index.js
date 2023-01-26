@@ -2,7 +2,7 @@ import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
 import './styles/main.scss';
 
-import App from './App';
+import Router from './Router';
 
 /**
  * @module index
@@ -18,7 +18,7 @@ document.documentElement.lang = htmlLang; // Passage du paramètre lang de la ba
 
 root.render(
   <StrictMode>
-    <App />
+    <Router />
   </StrictMode>,
 );
 
