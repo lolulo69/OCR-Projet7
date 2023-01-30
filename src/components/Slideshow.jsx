@@ -36,6 +36,7 @@ function Slideshow({ pictures }) {
             style={{ backgroundImage: `url(${pictures[currentIndex]})` }}
         >
             <svg
+                style={pictures.length === 1 ? { visibility: 'hidden' } : {}}
                 onClick={(e) => {
                     handlePrev();
                     e.stopPropagation();
@@ -55,6 +56,7 @@ function Slideshow({ pictures }) {
                 pictures.length
             }`}</p>
             <svg
+                style={pictures.length === 1 ? { visibility: 'hidden' } : {}}
                 onClick={(e) => {
                     handleNext();
                     e.stopPropagation();
