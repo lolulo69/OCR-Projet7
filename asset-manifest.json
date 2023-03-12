@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/OCR-Projet7/static/css/main.2c65ebc4.css",
+    "main.js": "/OCR-Projet7/static/js/main.34356e7d.js",
+    "static/media/bannerAbout.png": "/OCR-Projet7/static/media/bannerAbout.fce6fc3e9ed27433e9b0.png",
+    "static/media/bannerHome.png": "/OCR-Projet7/static/media/bannerHome.efc1935eb81fc5e585f9.png",
+    "static/media/bannerAboutMobile.png": "/OCR-Projet7/static/media/bannerAboutMobile.b5d2c89793569e257bcd.png",
+    "index.html": "/OCR-Projet7/index.html",
+    "main.2c65ebc4.css.map": "/OCR-Projet7/static/css/main.2c65ebc4.css.map",
+    "main.34356e7d.js.map": "/OCR-Projet7/static/js/main.34356e7d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2c65ebc4.css",
+    "static/js/main.34356e7d.js"
+  ]
+}
