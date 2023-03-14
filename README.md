@@ -10,7 +10,7 @@ L'application n'est pas complète, seul le front-end est réalisé ici.
 On se sert d'un fichier .json pour simuler un appel API.
 Un loader est implémenté, étant donné qu'il n'y a (quasiment) aucun délai de chargement ici, un délai de 3 secondes est simulé au chargement de la page d'accueil (oui c'est beaucoup, mais admirez le loader).
 
-Pour en savoir plus, la documentation du projet (générée avec JSdoc) est dispo dans le dossier [docs](https://github.com/lolulo69/OCR-Projet7/tree/main/docs) !
+Pour en savoir plus, la documentation du projet (générée avec JSdoc) est disponible ici : [Documentation](https://lolulo69.github.io/OCR-Projet7/)
 
 ## Scripts utilisables
 
